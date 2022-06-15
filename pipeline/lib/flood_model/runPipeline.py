@@ -36,17 +36,17 @@ logger = logging.getLogger(__name__)
 def main():
     startTime = time.time() 
     logger.info(str(datetime.datetime.now()))
-    dbm_ = dbm('5-day', 'ETH',3)
-    filename='data.zip'
-    path = 'flood/Gold/datapipeline/'+ filename
+    #dbm_ = dbm('5-day', 'ETH',3)
+    #filename='data.zip'
+    #path = 'flood/Gold/datapipeline/'+ filename
     #admin_area_json1['geometry'] = admin_area_json1.pop('geom')
-    DataFile = dbm_.getDataFromDatalake(path)
-    if DataFile.status_code >= 400:
-        raise ValueError()
-    open('./' + filename, 'wb').write(DataFile.content)
-    path_to_zip_file='./'+filename
-    with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
-        zip_ref.extractall('./data')
+    #DataFile = dbm_.getDataFromDatalake(path)
+    #if DataFile.status_code >= 400:
+    #    raise ValueError()
+    #open('./' + filename, 'wb').write(DataFile.content)
+    #path_to_zip_file='./'+filename
+    #with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
+    #    zip_ref.extractall('./data')
     
     
 
